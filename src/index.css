@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --font-Inconsolata: 'Inconsolata';
+  --color-Neutral300: hsl(252, 6%, 83%);
+  --color-Neutral500: hsl(245, 15%, 58%);
+  --color-Neutral700: hsl(245, 19%, 35%);
+  --color-Neutral900: hsl(248, 70%, 10%);
+  --color-Orange500: hsl(7, 88%, 67%);
+  --color-Orange700: hsl(7, 71%, 60%);
+}
+
+.container{
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 2.25em 1.25em;
+  color: white;
+  font-family: 'Inconsolata', serif;
+  background-image: 
+    url(/public/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg),
+    url(/public/assets/images/pattern-squiggly-line-top.svg),
+    url(/public/assets/images/pattern-circle.svg);
+
+  background-position: left bottom, top right, 125% 85%;
+  background-size: 75%, 50%, 40%;
+  background-repeat:  no-repeat, no-repeat, no-repeat;
+}
+
+.container::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-image: url(/public/assets/images/background-mobile.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width:40em) {
+  .container{
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 2.25em 1.25em;
+    color: white;
+    font-family: 'Inconsolata', serif;
+    background-image: 
+      url(/public/assets/images/pattern-squiggly-line-bottom-desktop.svg),
+      url(/public/assets/images/pattern-squiggly-line-top.svg),
+      url(/public/assets/images/pattern-circle.svg);
+
+    background-position: left bottom, top right, 100% 60%;
+    background-size:  75%, 50%, 30%;
+    background-repeat:  no-repeat, no-repeat, no-repeat;
+  }
+
+  .container::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: url(/public/assets/images/background-tablet.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width:60em) {
+  .container{
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 3em 1.25em;
+    color: white;
+    font-family: 'Inconsolata', serif;
+    background-image: 
+      url(/public/assets/images/pattern-squiggly-line-bottom-desktop.svg),
+      url(/public/assets/images/pattern-squiggly-line-top.svg),
+      url(/public/assets/images/pattern-circle.svg);
+
+    background-position: left bottom, top right, 100% 60%;
+    background-size:  70%, 50%, 30%;
+    background-repeat:  no-repeat, no-repeat, no-repeat;
+  }
+
+  .container::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-image: url(/public/assets/images/background-desktop.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.gradient{
+  background-image: linear-gradient(90deg,hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  background-clip: text;
+  color: transparent;
+}
